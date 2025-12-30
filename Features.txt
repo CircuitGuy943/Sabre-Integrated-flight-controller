@@ -1,6 +1,7 @@
 Features:
 - Can run off a 3s LiPo battery with an XT60 connector (ESCs can provide 5V as well but only one ESC can be connected, and it doesn’t provide much power)
 - Have a decently powerful STM32 or ESP32 processor with enough speed to process all data and run a camera too
+- Has a USB C port
 
 - Can obtain position and altitude data with sensors (sensor will probably be a chip with integrated fusion technology to remove the need for things like Kalman filters and reduce main MCU load)
 - Can log and store data for when powered off
