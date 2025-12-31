@@ -1,19 +1,32 @@
-Features:
-- Can run off a 3s LiPo battery with an XT60 connector (ESCs can provide 5V as well but only one ESC can be connected, and it doesn’t provide much power)
-- Have a decently powerful STM32 or ESP32 processor with enough speed to process all data and run a camera too
-- Has a USB C port
+SENSORS
+1. 9 Axis DOF IMU - BNO085. Sensor fusion integrated into the chip, reduces the need for MCU Kalman filters etc and therefore reduces MCU load and increases reliability
+2. Barometer for altitude / temperature - BMP580. Can be connected straight to MCU or through a passthrough for “Environmental Sensors” through the BNO085, this is harder to implement but it may simplify circuitry use less I2C lines.
+3. STM32 processor. Which one? Needs to be dual core
 
-- Can obtain position and altitude data with sensors (sensor will probably be a chip with integrated fusion technology to remove the need for things like Kalman filters and reduce main MCU load)
-- Can log and store data for when powered off
+CONTROL
+1. GPIO PWM outputs connected to 4 (more if there is space) groups of 3 pin headers for the ESCs, backup 5V power will also be taken from here as ESCs also step-down power to 5V. Located preferably in a symmetric position or spread out symmetrically so all the wires are extended the same.
+2. PWM Inputs from the Radio Receiver (6 groups of also 3 pin headers, more if there is space and GPIO availability). These must OUTPUT 5V as well because the receiver needs a voltage input to function, unlike the ESCs that make their own.
+
+POWER
+1. USB C port connection on the back of the board
+2. Female XT60 power connector with appropriate step down for MCU and sensors (Not LDO as components will likely consume too much current for too high a step down from ~14V)
+3. Dual connection with diodes to both the ESC power outputs but also a voltage reducer like LDO or buck reducer on the USB C for redundancy if the LDO/buck dies.
+4. Each side of the board will also have 2 (Maybe more if there's space) XT60 connectors powering the ESCs/motors
+
+CAMERA SUPPORT
+1. Caddx Ant (Lite) camera
+2. 75-ohm impedance matched trace from JST-SH 1.0?mm connector to VID_IN of OSD Injector
+3. MAX7456 OSD injector connected through communication protocol to MCU
+4. MAC7456 VID_OUT connected through another 75-ohm impedance matched trace to TX5813 VID_IN
+5. TX5813 SMD VTX + necessary support electronics + switch for on/off as VTX is very power hungry
+6. 50-ohm impedance matched / ground trace from ANTENNA pad to an SMA connector
+7. Antenna
+Plus, appropriate ground plane and distances from other electronics such as MCU and switching regulators
+
+OTHER
+1. 12V LED control with up to 200mA+ of power available from GPIO.
+2. SD Card module also placed wherever best, far away from the VTX module and preferably close to the MCU
+3. I2C and SPI output headers for any future addition of sensors/logging/modules
+4. 4 segment display (3 if not enough GPIO) plus a few tactile buttons (again GPIO limited) to allow easy tweaking of PID control values and other settings without the need for reupload of code.
 
 
-- Can control and output PWM data signals for 4+ brushless motors
-- Can take PWM input signals from 6+ channels from radio control
-- Can power 4+ 3s power outputs with XT60 connectors for motors
-- Can power a small medium power LED of about 100-200mA with GPIO control
-
-- Have a camera port to connect a standard FPV camera
-- Bluetooth/Wi-Fi capability to transmit log data / FPV camera view
-- Have a 3-4 segment display and 3+ tactile pushbuttons for easy setting tweaking (or equivalent
-- I2C (and other communication protocol) inputs to allow for easy accommodation for sensors added later in development
-- Integrate infrared distance sensors on each direction of the board (I have to research if some 90-degree modules are available to solder directly to the board)
