@@ -29,4 +29,5 @@ OTHER
 3. I2C and SPI output headers for any future addition of sensors/logging/modules
 4. 4 segment display (3 if not enough GPIO) plus a few tactile buttons (again GPIO limited) to allow easy tweaking of PID control values and other settings without the need for reupload of code.
 
+USE 0805 LEDS FOR BASIC COMPONENT
 
