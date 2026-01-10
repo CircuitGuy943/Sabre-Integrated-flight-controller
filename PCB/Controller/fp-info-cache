@@ -1,4 +1,4 @@
-26790308383845932
+26802682932952235
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -69321,6 +69321,13 @@ solder jumper open
 3
 3
 LCSC
+CONN-TH_2P-P5.00_CPC3703CTR
+
+
+0
+2
+2
+LCSC
 CONN-TH_S3B-ZR-SM4A-TF-LF-SN
 
 
@@ -69349,6 +69356,13 @@ HTSSOP-28_L9.7-W4.4-P0.65-LS6.4-BL-EP5.5
 29
 29
 LCSC
+IND-SMD_L4.0-W4.0-A
+
+
+0
+2
+2
+LCSC
 LED-SEG-TH_14P-L32.2-W10.2-P2.54-S7.62-BL
 
 
@@ -69370,6 +69384,20 @@ LGA-28_L5.2-W3.8-P0.50-BL-1
 28
 28
 LCSC
+QFN-24_L4.0-W4.0-P0.50-BL-EP2.8
+
+
+0
+25
+25
+LCSC
+R2725
+
+
+0
+2
+2
+LCSC
 SD-SMD_SD-006M
 
 
@@ -69383,6 +69411,13 @@ SMA-TH_SMA-KWE_C7498154
 0
 5
 5
+LCSC
+SMA_L4.3-W2.6-LS5.2-RD
+
+
+0
+2
+2
 LCSC
 SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL
 
@@ -69425,6 +69460,20 @@ VQFN-15_L3.0-W2.5-P0.50-BL
 0
 17
 13
+LCSC
+VQFN-32_L4.0-W4.0-P0.40-TL-EP
+
+
+0
+33
+33
+LCSC
+VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4_2
+
+
+0
+33
+33
 LCSC
 VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL
 
