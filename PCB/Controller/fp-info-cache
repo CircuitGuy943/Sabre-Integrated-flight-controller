@@ -1,4 +1,4 @@
-26802682932952235
+26836276868714694
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -69321,6 +69321,20 @@ solder jumper open
 3
 3
 LCSC
+CAP-SMD_BD6.3-L6.6-W6.6-LS7.2-FD
+
+
+0
+2
+2
+LCSC
+CAP-SMD_BD6.3-L6.6-W6.6-LS7.2-FD-1
+
+
+0
+2
+2
+LCSC
 CONN-TH_2P-P5.00_CPC3703CTR
 
 
@@ -69336,6 +69350,13 @@ CONN-TH_S3B-ZR-SM4A-TF-LF-SN
 5
 LCSC
 CONN-TH_XT60PW-M
+
+
+0
+4
+4
+LCSC
+CRYSTAL-SMD_4P-L3.2-W2.5-BL
 
 
 0
@@ -69363,12 +69384,47 @@ IND-SMD_L4.0-W4.0-A
 2
 2
 LCSC
+IND-SMD_L5.5-W5.3
+
+
+0
+2
+2
+LCSC
+IND-SMD_L7.5-W7.2-1
+
+
+0
+2
+2
+LCSC
 LED-SEG-TH_14P-L32.2-W10.2-P2.54-S7.62-BL
 
 
 0
 14
 14
+LCSC
+LED0603-R-RD_WHITE
+
+
+0
+2
+2
+LCSC
+LED0603-RD
+
+
+0
+2
+2
+LCSC
+LGA-8_BME280_BL
+
+
+0
+8
+8
 LCSC
 LGA-10_L2.0-W2.0-P0.50-TL_BMP580
 
@@ -69390,6 +69446,13 @@ QFN-24_L4.0-W4.0-P0.50-BL-EP2.8
 0
 25
 25
+LCSC
+R2512
+
+
+0
+2
+2
 LCSC
 R2725
 
@@ -69426,6 +69489,27 @@ SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL
 8
 8
 LCSC
+SOP-8_L4.9-W3.9-P1.27-LS6.0-BL
+
+
+0
+8
+8
+LCSC
+SOT-23_L2.9-W1.3-P1.90-LS2.4-BR
+
+
+0
+3
+3
+LCSC
+SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR-1
+
+
+0
+4
+3
+LCSC
 SW-SMD_L3.9-W3.0-P4.45
 
 
@@ -69461,6 +69545,20 @@ VQFN-15_L3.0-W2.5-P0.50-BL
 17
 13
 LCSC
+VQFN-20_L4.5-W3.5-P0.50-BL-EP
+
+
+0
+21
+21
+LCSC
+VQFN-21_L5.0-W3.0-P0.50-TL
+
+
+0
+21
+21
+LCSC
 VQFN-32_L4.0-W4.0-P0.40-TL-EP
 
 
@@ -69474,6 +69572,20 @@ VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4_2
 0
 33
 33
+LCSC
+VSON-8_L3.3-W3.3-P0.65-BR
+
+
+0
+10
+9
+LCSC
+VSON-CLIP-8_L3.3-W3.3-P0.65-BL
+
+
+0
+9
+8
 LCSC
 VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL
 
@@ -106525,3 +106637,24 @@ Varistor VF
 0
 2
 2
+my
+MC7RE
+Through hole straight socket strip, 1x08, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x08 2.54mm single row
+0
+24
+24
+my
+PinSocket_3x08_P2.54mm_Vertical
+Through hole straight socket strip, 1x08, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x08 2.54mm single row
+0
+24
+24
+my
+TX5813
+
+
+0
+0
+0

@@ -8,3 +8,4 @@
 8. Figure out I2C buses for everything
 9. Don't forget about I2C line pullups
 10. Ensure display pins are split over different GPIO groups so that the 100mA limit isn't exceeded
+11. MAX mosfets for differing signal voltages
