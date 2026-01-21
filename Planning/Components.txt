@@ -1,7 +1,7 @@
 SENSORS
 1. 9 Axis DOF IMU - BNO085. Sensor fusion integrated into the chip, reduces the need for MCU Kalman filters etc and therefore reduces MCU load and increases reliability
 2. Barometer for altitude / temperature - BMP580. Can be connected straight to MCU or through a passthrough for “Environmental Sensors” through the BNO085, this is harder to implement but it may simplify circuitry use less I2C lines.
-3. STM32 processor. Which one? Needs to be dual core
+3. STM32 processor. Which one? Needs to be dual core (Update: Doesn't need to be dual core)
 
 CONTROL
 1. GPIO PWM outputs connected to 4 (more if there is space) groups of 3 pin headers for the ESCs, backup 5V power will also be taken from here as ESCs also step-down power to 5V. Located preferably in a symmetric position or spread out symmetrically so all the wires are extended the same.
@@ -30,6 +30,4 @@ OTHER
 4. 4 segment display (3 if not enough GPIO) plus a few tactile buttons (again GPIO limited) to allow easy tweaking of PID control values and other settings without the need for reupload of code.
 5. Voltage divider for voltage sensing.
 6. Voltage and current sensing on main power rail
-
-USE 0805 LEDS FOR BASIC COMPONENT
 

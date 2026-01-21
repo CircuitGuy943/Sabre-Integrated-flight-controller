@@ -1,0 +1,7 @@
+SOFTWARE
+
+1. Add sensor soft reset for recovery of communication (BMP580 and others)
+3. Add battery health management system in program (monitor current across voltage decrease)
+5. Adaptive PID and vibration sensing. Log RPM and IMU data
+
+HARDWARE
