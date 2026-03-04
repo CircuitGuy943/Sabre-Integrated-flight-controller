@@ -6,5 +6,11 @@ SOFTWARE
 
 HARDWARE
 
-1. Add GPS module PCB on the backend of battery
 2. Add PCB module for receiver and display output.
+3. MOVE ENTIRE PCB TO THE BOTTOM OF THE DRONE TO PUT GPS ON TOP.
+
+FINISH
+
+1. Figure out necessary parts for order. 3x8 female headers, ribbon cable, VTX, etc
+2. Add C6936314 FFC cable to order
+3. Check all I2C addresses!!!
