@@ -42921,6 +42921,7 @@
 	(symbol
 		(lib_id "LCSC:XFL4020-152MEC")
 		(at 184.15 383.54 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -42937,7 +42938,7 @@
 			)
 		)
 		(property "Value" "XFL4020-152MEC"
-			(at 187.198 385.826 0)
+			(at 181.102 385.826 0)
 			(effects
 				(font
 					(size 1.27 1.27)
