@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.1
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -542,7 +542,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/eduar/Documents/GitHub/Sabre-Integrated-Flight-Controller/PCB Art/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "Controller.step",
