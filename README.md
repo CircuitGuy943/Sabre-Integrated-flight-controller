@@ -2,6 +2,11 @@ I am currently trying to build my own drone from scratch, and slowly replace eve
 
 # *SABRE!*
 
+<img width="658" height="496" alt="image" src="https://github.com/user-attachments/assets/596ecb43-6d1a-4318-89ff-55ae019cac65" />
+<img width="747" height="423" alt="image" src="https://github.com/user-attachments/assets/23bc5ffb-be6a-408a-aa12-0ab075b191a4" />
+
+
+
 For one of my biggest projects yet I designed a jack of all trades custom flight controller board. It also comes with custom firmware, or if possible compatibility with betaflight or other FC firmware out there. At it's core are two PCBs arranged in a stackup with the "top" and "bottom" sections. The two PCBs connect through the common 2.54mm pitch headers and stack on top of eachother and each serve to provide enough space for all the components and separate the sensitive digital components from the electromagnetic potential of the motor power rails. The bottom board houses E-Fuse protection and an INA226 current monitor to protect the boards, including powered FPV feed with the AT7456E and TX5813, accompanied by four MOSFET powered 12V LED strip channels. The top booard houses a powerful STM32F765VGT CPU which will, *fingers crossed,* be more than enough to run automatic flight levelling software quickly enough to not crash. Followed by a micro SD card slot for storing flight telemetry, programmable DIP switched for easy settings, BNO08x 9-DOF sensor module, segment display and pushbuttons for easy configuration without needing to reupload code and a BMP580 barometic sensor. More than I (or you) will ever need to fly a 4 blade, 1KG piece of PETG plastic :)
 
 ### Bottom Board:
@@ -15,8 +20,6 @@ The RF circuitry benefits from an impedance accurate JLC-3313 stackup and use of
 ### Top Board:
 
 Flying the drone is an STM32F765VGT CPU with up to 216MHz clock speed, hopefully resulting in almost perfect drone levelling and flight, on the other side of the board is also a USB C receptacle for programming the STM CPU, and powering the board while doing so (everything except the motors, of course, I also included diodes to prevent power backfeed). Close by is a BNO08x 9-DOF accelerometer, gyroscope and magnetometer, complete with an integrated 32-bit ARM Cortex-M0+ for quick sensor fusion with pre built firmware (meaning I have to code waaaay less :D). Motor PWM outputs for the ESCs also connected directly to PWM channels on the STM32 and two solder bridgeable connections to allow me to use the 5V supply from the ESCs in case my 5V regulator doesn't function properly under load (I've had bad experience with voltage regulators). Several voltage indicator LEDs are also placed near the USB C port at the back. Then there is also an UART FPC port designed to connect to a separate GPS board (large board for good GPS recieving power, check my other repositories) on the left side of the board. A 7 segment, 4 digit bitbanged display and several tactile pushbottoms also occupy the centre of the board, quite useless but they might be useful in changing more accute settings without having to reupload firmware every time. A micro SD card also connects through 4 channel SPI to STM32, I plan to use this to store settings or flight telemetry information that I could analyze while debugging. Powering all that is a 3.3V regulator (LMR51430XF), simplest (and therefore most reliable) I could find. And several other breakout headers for power/functionality. PWM inputs from the radio remote is recieved through a 3x8 header pinout designed for my specific radio reciever module.
-
-(For BP reviewer: Btw, the two boards will be connected and bought as one piece from JLC, then I will cut them apart and stack them, I just ran out of time to do that, there's also quite a bit off polishing off to do like doing Fusion renders but I've also run out of time, so the project would be a bit more polished and it will be but not before the BP deadline. 3D file of board is also too big (over 100MB) to upload to GitHub)
 
 ## Features:
 - Fully integrated design:
@@ -71,12 +74,6 @@ And here is the schematic
 <img src=Pictures/SCHEMATIC1.png alt="Schematic1" width="800"/>
 <img src=Pictures/SCHEMATIC2.png alt="Schematic2" width="800"/>
 <img src=Pictures/SCHEMATIC3.png alt="Schematic3" width="800"/>
-
-
-## 3D render
-Here is also a 3D render to show off the PCB :)
-
-<img src=Pictures/RENDER1.png alt="Render1" width="300"/>
 
 ## Firmware Overview
 I've included some basic firmware (**untested**) that should get the TFT display working out of the box with a quick upload from arduino IDE
